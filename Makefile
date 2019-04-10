@@ -29,7 +29,7 @@ test:
 
 .PHONY: \
 	install \
-	prod \
+	prd \
 	debug \
 	dev \
 	dev-debug \
