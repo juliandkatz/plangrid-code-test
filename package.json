@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/juliandkatz/plangrid-code-test/issues"
   },
-  "homepage": "https://github.com/juliandkatz/plangrid-code-test#readme"
+  "homepage": "https://github.com/juliandkatz/plangrid-code-test#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
 }
