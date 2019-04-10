@@ -6,7 +6,7 @@ describe('/', () => {
   describe('GET', () => {
     describe('Accept header', () => {
       describe('is anything but application/json', () => {
-        it('returns the correct html response', (done) => {
+        it('returns 200 with the correct html response', (done) => {
           request(index)
             .get('/')
             .expect(200, '<p>Hello, World</p>', done)
@@ -14,7 +14,7 @@ describe('/', () => {
       })
 
       describe('is application/json', () => {
-        it('returns the correct json response', (done) => {
+        it('returns 200 with the correct json response', (done) => {
           request(index)
             .get('/')
             .set('Accept', 'application/json')
