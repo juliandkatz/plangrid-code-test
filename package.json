@@ -1,0 +1,19 @@
+{
+  "name": "plangrid-code-test",
+  "version": "1.0.0",
+  "description": "A code test for a DevOps role at PlanGrid",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juliandkatz/plangrid-code-test.git"
+  },
+  "author": "Julian Katz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/juliandkatz/plangrid-code-test/issues"
+  },
+  "homepage": "https://github.com/juliandkatz/plangrid-code-test#readme"
+}
