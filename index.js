@@ -1,18 +1,9 @@
 const express = require('express')
 const app = express()
-const port = 3000
+const PORT = 3000
+const { basicGet, basicPost } = require('./routes')
 
-app.get('/', (req, res) => {
-  console.log(req.header('Accept'))
-  if (req.header('Accept') === 'application/json') {
-    res.json({ message: 'Good morning' })
-  } else {
-    res.send('<p>Hello, World</p>')
-  }
-})
+app.get('/', basicGet)
+app.post('/', basicPost)
 
-app.post('/', (req, res) => {
-  res.send(200)
-})
-
-app.listen(port, () => console.log(`Example app listening on port ${port}!`))
+app.listen(PORT, () => console.log(`Example app listening on PORT ${PORT}!`))
