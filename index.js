@@ -11,4 +11,8 @@ app.get('/', (req, res) => {
   }
 })
 
+app.post('/', (req, res) => {
+  res.send(200)
+})
+
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
