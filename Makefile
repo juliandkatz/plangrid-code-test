@@ -1,8 +1,11 @@
-prod:
+prd:
 	npm start
 
 dev:
 	npm run dev
+
+dev-debug:
+	DEBUG=true npm run dev
 
 get-with-accept:
 	./scripts/get-with-accept
