@@ -1,5 +1,7 @@
+const url = require('url')
+
 function basicGet (req, res) {
-  logRequest('/')
+  logRequest(req)
 
   if (req.header('Accept') === 'application/json') {
     res.json({ message: 'Good morning' })
@@ -9,15 +11,21 @@ function basicGet (req, res) {
 }
 
 function basicPost (req, res) {
-  logRequest('/')
+  logRequest(req)
   res.sendStatus(200)
 }
 
-function logRequest (path) {
+function logRequest (req) {
   if (process.env.DEBUG !== 'true') { return }
 
+  const origUrl = url.format({
+    protocol: req.protocol,
+    host: req.get('host'),
+    pathname: req.originalUrl
+  })
+
   const d = new Date()
-  console.log(`${d.toUTCString()} - DEBUG - path: ${path}`)
+  console.log(`${d.toUTCString()} - DEBUG - ${origUrl}`)
 }
 
 module.exports = {
